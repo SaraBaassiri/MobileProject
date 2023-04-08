@@ -71,10 +71,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Initialize FirebaseAuth instance
         mAuth = FirebaseAuth.getInstance();
 
-        Register = (Button) findViewById(R.id.go_to_register);
 
 
         setContentView(R.layout.activity_login);
+
+        Register = (Button) findViewById(R.id.go_to_register);
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
