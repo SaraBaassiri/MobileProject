@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    Button Register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Initialize FirebaseAuth instance
         mAuth = FirebaseAuth.getInstance();
 
+        Register = (Button) findViewById(R.id.go_to_register);
+
+
         setContentView(R.layout.activity_login);
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -97,6 +102,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+
+        Register.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void populateAutoComplete() {
