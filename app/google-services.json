@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "629131451934",
+    "firebase_url": "https://mobileproject-5aaca-default-rtdb.firebaseio.com",
+    "project_id": "mobileproject-5aaca",
+    "storage_bucket": "mobileproject-5aaca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629131451934:android:5bd78044394d4b024c180f",
+        "android_client_info": {
+          "package_name": "com.example.homsi.psf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629131451934-c93ka8os6bjch87qjve45ep8bov5vje8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARvsSRwbIQoKDxrs43tM0QtWcgSYCFAFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629131451934-c93ka8os6bjch87qjve45ep8bov5vje8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
