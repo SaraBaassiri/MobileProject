@@ -13,16 +13,16 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="Welcome">Welcome to Parking Spot Finder!</string>
+    <string name="Welcome">Parking Spot Finder</string>
     <string name="WelcomeDes">The Best Parking Spot Finding App in Lebanon</string>
     <string name="Login">Log In</string>
     <string name="register">Register</string>
     <string name="title_activity_maps">Map</string>
-    <string name="searchlisting">SearchListing</string>
-    <string name="createlisting">CreateListing</string>
-    <string name="deletelisting">DeleteListing</string>
+    <string name="searchlisting">Search Listing</string>
+    <string name="createlisting">Create Listing</string>
+    <string name="deletelisting">Delete Listing</string>
     <string name="profile">Profile</string>
-    <string name="signout">SignOut</string>
+    <string name="signout">Sign Out</string>
     <string name="username">userName</string>
     <string name="price_label">Price</string>
     <string name="address_label">Address</string>
