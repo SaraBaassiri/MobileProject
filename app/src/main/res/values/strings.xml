@@ -13,10 +13,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="Welcome">Parking Spot Finder</string>
+    <string name="Welcome">Welcome Back!</string>
     <string name="WelcomeDes">The Best Parking Spot Finding App in Lebanon</string>
     <string name="Login">Log In</string>
-    <string name="register">Register</string>
+    <string name="register">Create Account</string>
     <string name="title_activity_maps">Map</string>
     <string name="searchlisting">Search Listing</string>
     <string name="createlisting">Create Listing</string>

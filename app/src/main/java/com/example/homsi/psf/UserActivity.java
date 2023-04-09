@@ -38,7 +38,7 @@ public class UserActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(userIsValid(user)) {
-                    helloUserText.setText(String.format("%s %s", "User: ", user.getEmail()));
+                    helloUserText.setText(String.format("%s",user.getEmail()));
                 }
 
             }
