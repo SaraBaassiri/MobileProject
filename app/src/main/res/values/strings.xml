@@ -18,10 +18,10 @@
     <string name="Login">Log In</string>
     <string name="register">Create Account</string>
     <string name="title_activity_maps">Map</string>
-    <string name="searchlisting">Search Listing</string>
-    <string name="createlisting">Create Listing</string>
-    <string name="deletelisting">Delete Listing</string>
-    <string name="profile">Profile</string>
+    <string name="searchlisting">Search\nListing</string>
+    <string name="createlisting">Create\nListing</string>
+    <string name="deletelisting">Delete\nListing</string>
+    <string name="profile">My Account</string>
     <string name="signout">Sign Out</string>
     <string name="username">userName</string>
     <string name="price_label">Price</string>
@@ -29,5 +29,5 @@
     <string name="Create_Listing_Submit">Create Parking Spot</string>
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="title_activity_other_user">OtherUserActivity</string>
-    <string name="my_bookings">My Bookings</string>
+    <string name="my_bookings">My\nBookings</string>
 </resources>

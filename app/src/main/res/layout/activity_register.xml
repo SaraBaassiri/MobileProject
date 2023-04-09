@@ -105,7 +105,10 @@ tools:context="com.example.homsi.psf.LoginActivity">
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Register"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
+        />
 
 
 </LinearLayout>

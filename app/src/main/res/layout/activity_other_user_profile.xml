@@ -22,10 +22,10 @@
         android:id="@+id/profName"
         android:layout_width="128dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="98dp"
         android:layout_marginStart="62dp"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="22dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/profLastName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,13 +48,12 @@
         android:id="@+id/profAddress"
         android:layout_width="210dp"
         android:layout_height="21dp"
-        android:layout_marginBottom="31dp"
-        android:layout_marginEnd="12dp"
         android:layout_marginStart="21dp"
+        android:layout_marginEnd="12dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/profCity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:layout_editor_absoluteY="363dp" />
 
     <TextView
         android:id="@+id/profState"
@@ -65,32 +64,6 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/profCity"
-        android:layout_width="170dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="299dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginStart="70dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profState" />
-
-    <TextView
-        android:id="@+id/profZip"
-        android:layout_width="123dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="267dp"
-        android:layout_marginEnd="227dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="13dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profState" />
 
     <TextView
         android:id="@+id/textView5"
@@ -121,12 +94,12 @@
 
     <Button
         android:id="@+id/submitReview"
-        android:layout_width="69dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="12dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,18 +112,15 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Write a Review"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ReviewText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profZip"
-        app:layout_constraintVertical_bias="0.0"
         tools:text="Write a Review" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

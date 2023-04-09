@@ -58,8 +58,6 @@ public class UserInfoActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(UserInfoActivity.this,android.R.layout.simple_spinner_item, state);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-
         finished.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,63 +72,39 @@ public class UserInfoActivity extends AppCompatActivity {
         String first = "";
         String last = "";
         if(bundle!=null) {
-
             first = bundle.getString("firstname");
             last = bundle.getString("lastname");
         }
-
         final String address = AddressView.getText().toString();
         //final String state = StateView.getText().toString();
-
         Spinner mySpinner=(Spinner) findViewById(R.id.spinner);
         final String state = mySpinner.getSelectedItem().toString();
-
-
-
         boolean cancel = false;
         View focusView = null;
-
-
         if (TextUtils.isEmpty(address) ) {
            AddressView.setError(getString(R.string.error_field_required));
             focusView = AddressView;
             cancel = true;
         }
-
-
-        /*
-        if(TextUtils.isEmpty(state)){
-          StateView.setError(getString(R.string.error_field_required));
-            focusView = StateView;
-            cancel = true;
-        }
-        */
-
         if (cancel) {
             focusView.requestFocus();
         } else {
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             String uid = "";
         if(user!=null) {
             uid = user.getUid();
         }
             DatabaseReference userRef = dataRef.child("User Id: " + uid).child("User Information");
-
             userRef.child("First name" ).setValue(first);
             userRef.child("Last name" ).setValue(last);
             userRef.child("Address").setValue(address);
             userRef.child("State").setValue(state);
-
-
         Context context = getApplicationContext();
             CharSequence failure = "You have completed the setup. Please log in";
             int duration = Toast.LENGTH_SHORT;
              Toast.makeText(context, failure, duration).show();
-
             startActivity(welcome);
             finish();
-
        }
     }
 }

@@ -11,7 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.homsi.psf.LoginActivity"
     android:background="@color/colorWhite">
-
     <!-- Login progress -->
     <ProgressBar
         android:id="@+id/login_progress"
@@ -20,28 +19,23 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="305dp"
         app:srcCompat="@drawable/login" />
-
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <AutoCompleteTextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
@@ -50,13 +44,10 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
@@ -68,9 +59,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
@@ -83,7 +72,6 @@
                 android:textColor="@color/colorWhite"
 
                 />
-
             <Button
                 android:id="@+id/go_to_register"
                 style="?android:textAppearanceSmall"
@@ -95,7 +83,6 @@
                 android:background="@color/colorAccent"
                 android:textColor="@color/colorWhite"
                 />
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

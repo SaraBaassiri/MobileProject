@@ -2,10 +2,6 @@ package com.example.homsi.psf;
 
 import java.text.NumberFormat;
 
-/**
- * Created by Jonnel on 10/30/2017.
- */
-
 public class PSpot {
 
     public double price;

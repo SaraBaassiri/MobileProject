@@ -49,8 +49,7 @@ public class OtherUserProfileActivity extends AppCompatActivity{
         lName = findViewById(R.id.profLastName);
         address = findViewById(R.id.profAddress);
         state = findViewById(R.id.profState);
-        city = findViewById(R.id.profCity);
-        zip = findViewById(R.id.profZip);
+
 
         review.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -80,8 +79,6 @@ public class OtherUserProfileActivity extends AppCompatActivity{
                 fName.setText(String.format("%s %s", "First Name: ", dataSnapshot.child("First name").getValue()));
                 lName.setText(String.format("%s %s", "Last Name: ", dataSnapshot.child("Last name").getValue()));
                 state.setText(String.format("%s %s", "State: ", dataSnapshot.child("State").getValue()));
-                city.setText(String.format("%s %s", "City: ", dataSnapshot.child("City").getValue()));
-                zip.setText(String.format("%s %s", "Zip: ", dataSnapshot.child("Zip").getValue()));
             }
 
             @Override

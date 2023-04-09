@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 
 public class SearchListingActivity extends AppCompatActivity {
     ListView mListView;
+    Button back;
     FirebaseUser user;
     String uid;
     String key;
@@ -34,6 +36,8 @@ public class SearchListingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_listing);
+
+
 
         mListView = findViewById(R.id.Listview);
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -60,6 +64,15 @@ public class SearchListingActivity extends AppCompatActivity {
             }
         });
 
+
+        back = findViewById(R.id.backButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void showData(final DataSnapshot dataSnapshot){

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.homsi.psf.UserActivity">
 
+
     <TextView
         android:id="@+id/emailText"
         android:layout_width="220dp"
@@ -13,48 +14,88 @@
         android:text="@string/username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.047"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        />
 
-    <Button
-        android:id="@+id/searchButton"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/searchlisting"
-        app:layout_constraintBottom_toTopOf="@+id/profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
-
-    <Button
-        android:id="@+id/createButton"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="312dp"
-        android:text="@string/createlisting"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-290dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="200dp"
+            android:layout_height="135dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorAccent"
+            android:text="@string/searchlisting"
+            android:textColor="@color/colorWhite"
 
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+            android:textSize="20sp" />
 
-        android:text="@string/deletelisting"
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="200dp"
+            android:layout_height="135dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorAccent"
+            android:text="@string/createlisting"
+            android:textColor="@color/colorWhite"
+
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="200dp"
+            android:layout_height="135dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorAccent"
+            android:text="@string/deletelisting"
+            android:textColor="@color/colorWhite"
+
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="200dp"
+            android:layout_height="135dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorAccent"
+            android:text="@string/my_bookings"
+            android:textColor="@color/colorWhite"
+
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/profile"
@@ -70,7 +111,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintVertical_bias="0.793"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
+        />
 
     <Button
         android:id="@+id/signoutButton"
@@ -81,20 +125,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"></Button>
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/my_bookings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteButton"
-        app:layout_constraintVertical_bias="0.069" />
+
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
+   />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

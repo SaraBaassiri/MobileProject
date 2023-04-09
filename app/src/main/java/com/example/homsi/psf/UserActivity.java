@@ -38,9 +38,8 @@ public class UserActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(userIsValid(user)) {
-                    helloUserText.setText(String.format("%s",user.getEmail()));
+                    helloUserText.setText(String.format("%s%s","Hello,\n", user.getEmail()));
                 }
-
             }
         };
 
@@ -100,7 +99,7 @@ public class UserActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void startSearchListing(){
-        Intent intent = new Intent(this, ChooseSearchActivity.class);
+        Intent intent= new Intent(this,SearchListingActivity.class);
         startActivity(intent);
     }
     private void signOutButton(){

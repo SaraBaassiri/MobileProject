@@ -89,8 +89,6 @@
         <activity android:name="com.example.homsi.psf.EditParkingSpot" />
         <activity android:name="com.example.homsi.psf.ReuseParkingSpot" />
         <activity android:name="com.example.homsi.psf.changeSpotInformation" />
-        <activity android:name="com.example.homsi.psf.ChooseSearchActivity" />
-        <activity android:name="com.example.homsi.psf.SearchZipActivity" />
         <activity android:name="com.example.homsi.psf.WritingActivity" />
         <activity android:name="com.example.homsi.psf.ListingOverviewActivity" />
         <activity android:name="com.example.homsi.psf.MyBookingActivity"></activity>

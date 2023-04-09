@@ -1,5 +1,6 @@
 package com.example.homsi.psf;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.annotation.NonNull;
@@ -41,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
     private String uid;
     FirebaseStorage picture;
     StorageReference pictureReference;
+    @SuppressLint("SuspiciousIndentation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final DatabaseReference dataRef = FirebaseDatabase.getInstance().getReference();
@@ -54,8 +56,6 @@ public class ProfileActivity extends AppCompatActivity {
         lName = findViewById(R.id.profLastName);
         address = findViewById(R.id.profAddress);
         state = findViewById(R.id.profState);
-        city = findViewById(R.id.profCity);
-        zip=findViewById(R.id.profZip);
         ChangeAccountInformation=findViewById(R.id.changeAccountInformation);
         user= FirebaseAuth.getInstance().getCurrentUser();
         uid=user.getUid();
@@ -86,8 +86,6 @@ public class ProfileActivity extends AppCompatActivity {
                 lName.setText(String.format("%s %s", "Last Name: ", dataSnapshot.child("Last name").getValue()));
                 address.setText(String.format("%s %s", "Address: ", dataSnapshot.child("Address").getValue()));
                 state.setText(String.format("%s %s", "State: ", dataSnapshot.child("State").getValue()));
-                city.setText(String.format("%s %s", "City: ", dataSnapshot.child("City").getValue()));
-                zip.setText(String.format("%s %s", "Zip: ", dataSnapshot.child("Zip").getValue()));
 
             }
 
