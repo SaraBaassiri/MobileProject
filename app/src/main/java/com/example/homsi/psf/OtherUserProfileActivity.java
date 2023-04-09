@@ -56,7 +56,6 @@ public class OtherUserProfileActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 String str = reviewText.getText().toString();
-                // TODO: User should be limited to one review per user to avoid spam from other users. need to fix.
                 DatabaseReference key = dataRef.child("User Id: " + otherUserId).child("User Information").child("Ratings").child("Reviews").push();
                 key.setValue(str);
                 reviewKeys.add(key.getKey());

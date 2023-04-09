@@ -21,6 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -37,6 +38,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -231,7 +233,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                                 int duration = Toast.LENGTH_SHORT;
                                 Toast.makeText(context, failure, duration).show();
                                 startActivity(userAdd);
-
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Context context = getApplicationContext();
@@ -240,8 +241,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
                                 Toast.makeText(context, failure, duration).show();
                             }
-
-                            // ...
                         }
                     });
         }

@@ -25,24 +25,36 @@ import java.util.regex.Pattern;
 public class UserInfoActivity extends AppCompatActivity {
 
     private AutoCompleteTextView AddressView;
-    private AutoCompleteTextView CityView;
     private AutoCompleteTextView StateView;
-    private AutoCompleteTextView ZipView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
-         AddressView = (AutoCompleteTextView) findViewById(R.id.address);
-        CityView = (AutoCompleteTextView) findViewById(R.id.city);
+        AddressView = (AutoCompleteTextView) findViewById(R.id.address);
         //StateView = (AutoCompleteTextView) findViewById(R.id.state);
-        ZipView= (AutoCompleteTextView) findViewById(R.id.zip);
         Button finished = (Button) findViewById(R.id.finish);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        String[] state = {"AK",  "AL", "AR", "AZ", "CA", "CO", "CT" ,"DE" ,"FL" ,"GA" ,"HI" ,"IA" ,"ID" ,"IL" ,"IN" ,"KS" ,"KY" ,"LA" ,"MA" ,"MD" ,"ME" ,"MI" ,"MN",
-                "MO" ,"MS" ,"MT" ,"NC" ,"ND" ,"NE" ,"NH" ,"NJ" ,"NM", "NV" ,"NY" ,"OH" ,"OK" ,"OR" ,"PA" ,"RI" ,"SC" ,"SD" ,"TN" ,"TX" ,"UT" ,"VA" ,
-                "VT" ,"WA" ,"WI" ,"WV" ,"WY"};
+        String[] state = {
+                "Beirut",
+                "Tripoli",
+                "Sidon",
+                "Tyre",
+                "Jounieh",
+                "Zahle",
+                "Nabatieh",
+                "Byblos",
+                "Batroun",
+                "Jbeil",
+                "Baalbek",
+                "Hermel",
+                "Anjar",
+                "Aley",
+                "Bint Jbeil",
+                "Chouf",
+                "Deir"
+        };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(UserInfoActivity.this,android.R.layout.simple_spinner_item, state);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -68,9 +80,7 @@ public class UserInfoActivity extends AppCompatActivity {
         }
 
         final String address = AddressView.getText().toString();
-        final String city = CityView.getText().toString();
         //final String state = StateView.getText().toString();
-        final String zip= ZipView.getText().toString();
 
         Spinner mySpinner=(Spinner) findViewById(R.id.spinner);
         final String state = mySpinner.getSelectedItem().toString();
@@ -88,11 +98,6 @@ public class UserInfoActivity extends AppCompatActivity {
         }
 
 
-        if (TextUtils.isEmpty(city)) {
-            CityView.setError(getString(R.string.error_field_required));
-            focusView = CityView;
-            cancel = true;
-        }
         /*
         if(TextUtils.isEmpty(state)){
           StateView.setError(getString(R.string.error_field_required));
@@ -100,11 +105,7 @@ public class UserInfoActivity extends AppCompatActivity {
             cancel = true;
         }
         */
-        if(TextUtils.isEmpty(zip) || zipTest(zip) == false){
-            ZipView.setError(getString(R.string.error_field_required));
-            focusView = ZipView;
-            cancel = true;
-        }
+
         if (cancel) {
             focusView.requestFocus();
         } else {
@@ -118,10 +119,8 @@ public class UserInfoActivity extends AppCompatActivity {
 
             userRef.child("First name" ).setValue(first);
             userRef.child("Last name" ).setValue(last);
-            userRef.child("Address").setValue( address);
-            userRef.child("City").setValue(city);
+            userRef.child("Address").setValue(address);
             userRef.child("State").setValue(state);
-            userRef.child("Zip").setValue(zip);
 
 
         Context context = getApplicationContext();
@@ -134,13 +133,4 @@ public class UserInfoActivity extends AppCompatActivity {
 
        }
     }
-    private boolean zipTest(String zip)
-    {
-        boolean ziptest = false;
-        String regex = "^[0-9]{5}(?:-[0-9]{4})?$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(zip);
-        return matcher.matches();
-    }
-
 }
