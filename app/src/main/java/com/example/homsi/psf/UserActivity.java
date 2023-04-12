@@ -18,7 +18,6 @@ public class UserActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private Button deleteListing;
     private Button searchListing;
-    private Button myBookings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,6 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
 
         auth=FirebaseAuth.getInstance();
-        myBookings = (Button) findViewById(R.id.button6);
         deleteListing = (Button) findViewById(R.id.deleteButton);
         signOutButton = (Button) findViewById(R.id.signoutButton);
         createListing = (Button) findViewById(R.id.createButton);
@@ -73,18 +71,8 @@ public class UserActivity extends AppCompatActivity {
                 profile();
             }
         });
-        myBookings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myBooking();
-            }
-        });
     }
 
-    private void myBooking(){
-        Intent intent = new Intent(this, MyBookingActivity.class);
-        startActivity(intent);
-    }
     private void deleteListingNow(){
         Intent deleteIntent = new Intent(this, DeleteActivity.class);
         startActivity(deleteIntent);

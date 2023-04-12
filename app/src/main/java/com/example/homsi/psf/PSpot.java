@@ -107,7 +107,7 @@ public class PSpot {
                 + "\n" + "Address: " +  getAddress() +"\n" + "Zip: " + getZip() + "\n" + "Start Time: "
                 + startTime +"\n" + "End Time: " + endTime + "\n" + "Start Date: " + startDate + "\n"
                 + "End Date: " + endDate +"\n"+ "Available: "+ availability + "\n"
-                + "Number of times booked: " + counter + "\n" + "Listing Hash= " + listingHash;
+                + "\n" + "Listing Hash= " + listingHash;
     }
     public String rentToString() {
         return "Parking Spot" + "\n"+"Owner:"+owner +"\n"+"Renter: " + reserve+ "\n"+ "$" + " " + getPrice() + "\n" + "Address: " +  getAddress() + "\n" + "Start Time: "+ startTime +"\n" + "End Time: " + endTime + "\n" + "Start Date: " + startDate + "\n" + "End Date: " + endDate +"\n"+ "Available: "+ availability;

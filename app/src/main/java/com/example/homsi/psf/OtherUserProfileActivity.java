@@ -78,7 +78,7 @@ public class OtherUserProfileActivity extends AppCompatActivity{
                 address.setText(String.format("%s %s", "Address: ", dataSnapshot.child("Address").getValue()));
                 fName.setText(String.format("%s %s", "First Name: ", dataSnapshot.child("First name").getValue()));
                 lName.setText(String.format("%s %s", "Last Name: ", dataSnapshot.child("Last name").getValue()));
-                state.setText(String.format("%s %s", "State: ", dataSnapshot.child("State").getValue()));
+                state.setText(String.format("%s %s", "City: ", dataSnapshot.child("State").getValue()));
             }
 
             @Override

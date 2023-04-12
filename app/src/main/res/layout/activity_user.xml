@@ -43,7 +43,6 @@
             android:background="@color/colorAccent"
             android:text="@string/searchlisting"
             android:textColor="@color/colorWhite"
-
             android:textSize="20sp" />
 
         <Button
@@ -54,7 +53,6 @@
             android:background="@color/colorAccent"
             android:text="@string/createlisting"
             android:textColor="@color/colorWhite"
-
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -71,7 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         >
 
         <Button
@@ -82,39 +79,18 @@
             android:background="@color/colorAccent"
             android:text="@string/deletelisting"
             android:textColor="@color/colorWhite"
-
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/profile"
+            android:text="@string/profile"
             android:layout_width="200dp"
             android:layout_height="135dp"
             android:layout_margin="5dp"
             android:background="@color/colorAccent"
-            android:text="@string/my_bookings"
             android:textColor="@color/colorWhite"
-
             android:textSize="20sp" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/profile"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorWhite"
-        />
 
     <Button
         android:id="@+id/signoutButton"
@@ -126,7 +102,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-
         android:background="@color/colorAccent"
         android:textColor="@color/colorWhite"
    />

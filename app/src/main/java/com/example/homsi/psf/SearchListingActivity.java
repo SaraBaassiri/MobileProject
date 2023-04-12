@@ -107,48 +107,6 @@ public class SearchListingActivity extends AppCompatActivity {
 
         final   ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
         mListView.setAdapter(adapter);
-        /*mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(SearchListingActivity.this);
-                builder.setMessage("Would you like to Book now? or Visit User Profile")
-                        .setCancelable(false)
-                        .setPositiveButton("Book now", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int j) {
-                                AlertDialog.Builder adb=new AlertDialog.Builder(SearchListingActivity.this);
-                                adb.setTitle("Book Parking Spot?");
-                                adb.setMessage("Are you sure you want to book this parking spot");
-                                final DataSnapshot update = bookings.get(i);
-                                adb.setNegativeButton("Cancel", null);
-                                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        update.child("availability").getRef().setValue(false);
-                                        update.child("reserve").getRef().setValue(uid);
-                                        int tocount = 0;
-                                        tocount = Integer.parseInt(update.child("counter").getValue().toString());
-                                        update.child("counter").getRef().setValue(tocount + 1);
-                                        adapter.notifyDataSetChanged();
-
-                                    }});
-                                adb.show();
-                            }
-
-                        })
-
-                        .setNegativeButton("Go to User Profile", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int j) {
-                                String ownerId = getOwnerParser(array.get(i));
-                                Intent otherUser = new Intent(getApplicationContext(), OtherUserProfileActivity.class);
-                                otherUser.putExtra("id", ownerId);
-                                startActivityForResult(otherUser, 0);
-                            }
-                        });
-                builder.show();
-
-            }
-        });*/
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
