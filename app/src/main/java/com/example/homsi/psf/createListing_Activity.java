@@ -37,7 +37,6 @@ public class createListing_Activity extends AppCompatActivity {
     private String eTime;
     private String sDate;
     private String eDate;
-    private AutoCompleteTextView ZipView;
 
 
     @Override
@@ -67,18 +66,32 @@ public class createListing_Activity extends AppCompatActivity {
         createListing = findViewById(R.id.submit);
         address_text = findViewById(R.id.address);
         price_text = findViewById(R.id.price);
-        ZipView= (AutoCompleteTextView) findViewById(R.id.zip);
         String add = address_text.getText().toString();
         String pri = price_text.getText().toString();
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        String[] state = {"AK",  "AL", "AR", "AZ", "CA", "CO", "CT" ,"DE" ,"FL" ,"GA" ,"HI" ,"IA" ,"ID" ,"IL" ,"IN" ,"KS" ,"KY" ,"LA" ,"MA" ,"MD" ,"ME" ,"MI" ,"MN",
-                "MO" ,"MS" ,"MT" ,"NC" ,"ND" ,"NE" ,"NH" ,"NJ" ,"NM", "NV" ,"NY" ,"OH" ,"OK" ,"OR" ,"PA" ,"RI" ,"SC" ,"SD" ,"TN" ,"TX" ,"UT" ,"VA" ,
-                "VT" ,"WA" ,"WI" ,"WV" ,"WY"};
+        String[] state = {
+                "Beirut",
+                "Tripoli",
+                "Sidon",
+                "Tyre",
+                "Jounieh",
+                "Zahle",
+                "Nabatieh",
+                "Byblos",
+                "Batroun",
+                "Jbeil",
+                "Baalbek",
+                "Hermel",
+                "Anjar",
+                "Aley",
+                "Bint Jbeil",
+                "Chouf",
+                "Deir"
+        };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(createListing_Activity.this,android.R.layout.simple_spinner_item, state);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        zip= ZipView.getText().toString();
         Spinner mySpinner=(Spinner) findViewById(R.id.spinner);
         final String stateInput = mySpinner.getSelectedItem().toString();
 
@@ -92,13 +105,7 @@ public class createListing_Activity extends AppCompatActivity {
             address_text.setError(null);
             //createListing.setEnabled(true);
         }
-        if(TextUtils.isEmpty(zip) || zipTest(zip) == false){
-            ZipView.setError(getString(R.string.error_field_required));
-        }
-        if(!TextUtils.isEmpty(zip) || !zipTest(zip) == false){
 
-            ZipView.setError(null);
-        }
         createListing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,7 +124,6 @@ public class createListing_Activity extends AppCompatActivity {
                     price = 0;
                 }
 
-                zip = ZipView.getText().toString();
                 address = address_text.getText().toString();
 
 
@@ -132,7 +138,7 @@ public class createListing_Activity extends AppCompatActivity {
                 key = listingRef.getKey();
 
 
-                PSpot spot = new PSpot(price, address,stateInput,zip, sDate, eDate, sTime, eTime, true, uid, null,0, getKey());
+                PSpot spot = new PSpot(price, address,stateInput,"", sDate, eDate, sTime, eTime, true, uid, null,0, getKey());
 
                // if (address_text != null && price_text != null) {
                 if(validPrice(price) && validAddress(address) && PriceBound(price)){

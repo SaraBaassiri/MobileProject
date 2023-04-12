@@ -91,7 +91,6 @@
         <activity android:name="com.example.homsi.psf.changeSpotInformation" />
         <activity android:name="com.example.homsi.psf.WritingActivity" />
         <activity android:name="com.example.homsi.psf.ListingOverviewActivity" />
-        <activity android:name="com.example.homsi.psf.MyBookingActivity"></activity>
     </application>
 
 </manifest>

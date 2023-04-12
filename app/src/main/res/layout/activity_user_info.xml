@@ -7,7 +7,6 @@
     tools:context="com.example.homsi.psf.UserInfoActivity"
     android:background="@color/colorWhite">
 
-
     <AutoCompleteTextView
         android:id="@+id/address"
         android:layout_width="315dp"

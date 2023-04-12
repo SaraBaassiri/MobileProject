@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.homsi.psf.WritingActivity"
     android:background="@color/colorWhite"
-
     >
 
     <TextView

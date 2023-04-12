@@ -29,7 +29,7 @@ public class WritingActivity extends AppCompatActivity {
         submit = findViewById(R.id.button4);
 
         final String owner = getIntent().getStringExtra("owner");
-        final String listingHash = getIntent().getStringExtra("listingHash");
+        final String listingHash = getIntent().getStringExtra("listingH ash");
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +47,6 @@ public class WritingActivity extends AppCompatActivity {
                         //System.out.println("WritingActivity Class: " + name);
                         //System.out.println("WritingActivity Class: " + nameParser(name));
                     }
-
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 
@@ -61,11 +60,9 @@ public class WritingActivity extends AppCompatActivity {
         // parse first name
         int start = str.indexOf("=");
         int end = str.indexOf(",");
-
         // parse last name
         int first = str.indexOf("Last name=");
         int last = str.lastIndexOf(",");
-
         return str.substring(start + 1 , end) + " " + str.substring(first + 10 , last);
     }
 

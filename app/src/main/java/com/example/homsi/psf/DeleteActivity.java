@@ -48,16 +48,12 @@ public class DeleteActivity extends AppCompatActivity{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 showData(dataSnapshot);
-
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
-
-
     }
 
     private void showData(final DataSnapshot dataSnapshot) {
@@ -88,14 +84,7 @@ public class DeleteActivity extends AppCompatActivity{
 
                     }});
                 adb.show();
-
             }
         });
-
-
     }
-
-
-
-
 }
